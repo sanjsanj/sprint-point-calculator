@@ -1,0 +1,41 @@
+{
+  "name": "sprint_point_calculator_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon -e js,graphql -x node src/index.js",
+    "dev": "nodemon -e js,graphql -x node --inspect src/index.js",
+    "deploy": "prisma deploy && graphql get-schema -p prisma",
+    "heroku:logs": "heroku logs --tail --app result-tracker",
+    "prisma:seed": "prisma reset -f && prisma seed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sanjsanj/sprint-point-calculator.git"
+  },
+  "author": "Sanjay Purswani <sanjsanj@hotmail.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/sanjsanj/sprint-point-calculator/issues"
+  },
+  "homepage": "https://github.com/sanjsanj/sprint-point-calculator#readme",
+  "dependencies": {
+    "babel-preset-env": "^1.7.0",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^6.2.0",
+    "graphql": "^14.0.2",
+    "graphql-yoga": "^1.16.7",
+    "jsonwebtoken": "^8.4.0",
+    "nodemon": "^1.18.9",
+    "npm-run-all": "^4.1.5",
+    "prisma": "^1.22.2",
+    "prisma-binding": "^2.2.11"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  }
+}
